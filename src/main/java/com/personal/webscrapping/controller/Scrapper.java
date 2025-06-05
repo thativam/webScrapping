@@ -21,7 +21,7 @@ public class Scrapper {
         return "index";
     }
 
-    @PostMapping("/scrape")
+    @PostMapping("/")
     public String post(@ModelAttribute("url") String url, Model model) {
         model.addAttribute("results", this.webScrapping.getBets(url));
         return "index";
